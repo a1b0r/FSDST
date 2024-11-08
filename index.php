@@ -51,9 +51,12 @@
         <!-- Login Button -->
         <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
     </form>
+
+    <!-- Registration Link -->
     <p class="mt-3">
-    Don't have an account? <a href="register.php">Register here</a>.
-</p>
+        Don't have an account? <a href="register.php">Register here</a>.
+    </p>
+
     <!-- Message Display -->
     <div id="message" class="mt-3"></div>
 </div>
@@ -82,6 +85,10 @@ $(document).ready(function(){
                     $('#message').html(
                       '<div class="alert alert-success">' + response.message + '</div>'
                     );
+                    // Redirect to the dashboard or home page
+                    setTimeout(function(){
+                        window.location.href = 'home.php';
+                    }, 2000);
                 } else {
                     $('#message').html(
                       '<div class="alert alert-danger">' + response.message + '</div>'
