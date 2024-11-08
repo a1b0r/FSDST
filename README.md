@@ -35,8 +35,8 @@ This application is a simple login page with the following features:
 1. **Clone the Repository**
 
    ```bash
-   git clone 
-   cd 
+   git clone https://github.com/a1b0r/FSDST.git
+   cd FSDST
     ```
 
 2. **Build and Run the Docker Containers**
@@ -50,6 +50,12 @@ This application is a simple login page with the following features:
 
 4. Access the Application
     - Open your browser and navigate to http://localhost:8080/.
+
+5. Test User Credentials
+
+A test user has been created for you to log in:
+    - Email: testuser@example.com
+    - Password: password
 
 ## Database Schema
 
