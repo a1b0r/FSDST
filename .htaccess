@@ -1,0 +1,14 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Allow access to index.php, register.php, home.php, and files in the api directory
+RewriteCond %{REQUEST_URI} ^/(index\.php|register\.php|home\.php|api/|css/|js/|images/)
+RewriteRule ^ - [L]
+
+# Deny access to any other .php files
+RewriteRule \.php$ - [F,L]
+
+# Redirect all other requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ index.php [L]
